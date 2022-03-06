@@ -1,11 +1,18 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
 	margin: 0;
-	font-family: 'Lato', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+html,
+body {
+	background: #16222a; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3a6073, #16222a);
+	background: linear-gradient(to right, #3a6073, #16222a);
+
+	font-size: 1.1rem;
+	font-family: 'Quicksand', sans-serif;
+	height: 100%;
 }

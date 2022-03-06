@@ -35,8 +35,11 @@ export class Todo extends Component {
 		let result
 		if (this.state.isEditing) {
 			result = (
-				<div>
-					<form onSubmit={this.handleUpdate}>
+				<div className="Todo">
+					<form
+						className="Todo-edit-form"
+						onSubmit={this.handleUpdate}
+					>
 						<input
 							type="text"
 							value={this.state.task}
@@ -49,15 +52,25 @@ export class Todo extends Component {
 			)
 		} else {
 			result = (
-				<div>
+				<div className="Todo">
 					<li
-						className={this.props.isComplete ? 'completed' : ''}
+						className={
+							this.props.isComplete
+								? 'Todo-task completed'
+								: 'Todo-task'
+						}
 						onClick={this.handleToggle}
 					>
 						{this.props.task}
 					</li>
-					<button onClick={this.toggleForm}>Edit</button>
-					<button onClick={this.handleRemove}>Delete</button>
+					<div className="Todo-buttons">
+						<button onClick={this.toggleForm}>
+							<i className="fas fa-pen" />
+						</button>
+						<button onClick={this.handleRemove}>
+							<i className="fas fa-trash" />
+						</button>
+					</div>
 				</div>
 			)
 		}
